@@ -26,7 +26,7 @@ public class HelloController {
     //API - http에 정보를 그대로 보내주는 형식
     @GetMapping("hello-string")
     @ResponseBody
-    public String helloStrign(@RequestParam("name") String name) {
+    public String helloString(@RequestParam("name") String name) {
         return "helle" + name;
     }
 
