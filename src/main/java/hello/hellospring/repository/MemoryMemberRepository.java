@@ -36,4 +36,9 @@ public class MemoryMemberRepository implements MemberRepository{
         //위에는 map인데 여기는 List로 되어있다. 실무에선 list를 많이 쓴다. 루프 돌리기도 편하고 그래서.
         return new ArrayList<>(store.values()); //스토어에 있는 values(map<Long, Member> 에서 value값인 Member를 가르키는 것. 즉,  store.values()는 Member다. -> Member들이 쫙 반환이 된다!)
     }
+
+    public void clearStore() {
+        store.clear();
+    }
+
 }
