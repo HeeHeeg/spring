@@ -9,7 +9,11 @@ import java.util.Optional;
 
 public class MemberService {
     //회원 서비스를 만들려면 회원리파지토리가 필요.
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입
